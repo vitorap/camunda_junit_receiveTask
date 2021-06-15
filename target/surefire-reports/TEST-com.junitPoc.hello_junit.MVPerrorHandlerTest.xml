@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.junitPoc.hello_junit.MVPerrorHandlerTest" time="0.314" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_291\jre\bin"/>
+    <property name="java.vm.version" value="25.291-b10"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\zalbvit\eclipse-workspaces\camunda-junit\hello-junit"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\zalbvit\eclipse-workspaces\camunda-junit\hello-junit"/>
+    <property name="java.runtime.version" value="1.8.0_291-b10"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_291\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\zalbvit\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\zalbvit\eclipse-workspaces\camunda-junit\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5724540778610748612.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_291\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_291\jre\bin;C:/Program Files/Java/jdk-11.0.11/bin/server;C:/Program Files/Java/jdk-11.0.11/bin;C:\Program Files\Java\jdk-11.0.11\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Maven\apache-maven-3.8.1\bin;C:\Users\zalbvit\AppData\Local\Microsoft\WindowsApps;;C:\Windows\system32;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\zalbvit"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="zalbvit"/>
+    <property name="java.class.path" value="C:\Users\zalbvit\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_1.16.0.20210129-0849\jars\plexus-classworlds-2.6.0.jar;C:\Users\zalbvit\.eclipse\org.eclipse.platform_4.19.0_867647348_win32_win32_x86_64\configuration\org.eclipse.osgi\412\0\.cp\lib\javaagent-shaded.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_291\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_291"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_291\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_291\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_291\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_291\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\zalbvit\eclipse-workspaces\camunda-junit\hello-junit\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.junitPoc.hello_junit.MVPerrorHandlerTest" name="testHappyPath" time="0.314">
+    <error message="Unknown property used in expression: ${info.implementationType == &quot;Alternative Path&quot;}. Cause: Cannot resolve identifier &apos;info&apos;" type="org.camunda.bpm.engine.ProcessEngineException">org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: ${info.implementationType == &quot;Alternative Path&quot;}. Cause: Cannot resolve identifier &apos;info&apos;
+	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:63)
+	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:50)
+	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:45)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior.doLeave(ExclusiveGatewayActivityBehavior.java:64)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:56)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:32)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1978)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:2045)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1994)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:52)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:44)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:61)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:50)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueIfExecutionDoesNotAffectNextOperation(PvmExecutionImpl.java:2039)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:42)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:31)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1978)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:2045)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1994)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:60)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:30)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:66)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionCreateScope.scopeCreated(PvmAtomicOperationTransitionCreateScope.java:38)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:54)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:28)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:118)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext$1.call(CommandInvocationContext.java:102)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext$1.call(CommandInvocationContext.java:100)
+	at org.camunda.bpm.engine.impl.context.ProcessApplicationClassloaderInterceptor.call(ProcessApplicationClassloaderInterceptor.java:48)
+	at org.camunda.bpm.application.AbstractProcessApplication.execute(AbstractProcessApplication.java:121)
+	at org.camunda.bpm.application.AbstractProcessApplication.execute(AbstractProcessApplication.java:132)
+	at org.camunda.bpm.engine.impl.context.Context.executeWithinProcessApplication(Context.java:206)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:100)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:288)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:460)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:264)
+	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:66)
+	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:38)
+	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:28)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:110)
+	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:72)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:70)
+	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:70)
+	at org.camunda.bpm.engine.impl.interceptor.CommandCounterInterceptor.execute(CommandCounterInterceptor.java:35)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:166)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:132)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:128)
+	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:88)
+	at com.junitPoc.hello_junit.MVPerrorHandlerTest.testHappyPath(MVPerrorHandlerTest.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+	at org.camunda.bpm.engine.test.ProcessEngineRule$1.evaluate(ProcessEngineRule.java:176)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier &apos;info&apos;
+	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
+	at org.camunda.bpm.engine.impl.juel.AstProperty.eval(AstProperty.java:52)
+	at org.camunda.bpm.engine.impl.juel.AstBinary$SimpleOperator.eval(AstBinary.java:27)
+	at org.camunda.bpm.engine.impl.juel.AstBinary.eval(AstBinary.java:106)
+	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
+	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
+	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
+	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:40)
+	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:58)
+	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:92)
+	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:63)
+	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:60)
+	... 142 more
+</error>
+    <system-out>10:19:08.309 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.junitPoc.hello_junit.MVPerrorHandlerTest], using SpringBootContextLoader
+10:19:08.317 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.junitPoc.hello_junit.MVPerrorHandlerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:19:08.318 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.junitPoc.hello_junit.MVPerrorHandlerTest]: MVPerrorHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:19:08.473 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.junitPoc.hello_junit.CamundaApplication for test class com.junitPoc.hello_junit.MVPerrorHandlerTest
+10:19:08.624 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:19:08.650 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@563f38c4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@543295b0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@54422e18, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@117159c0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e27ba32, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7ef82753, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3b0fe47a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@202b0582, org.springframework.test.context.event.EventPublishingTestExecutionListener@235ecd9f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1ca3b418, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@58cbafc2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2034b64c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@75d3a5e0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@74d1dc36, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@7161d8d1]
+
+ ____                                 _         ____  _       _    __                      
+/ ___| __ _ _ __ ___  _   _ _ __   __| | __ _  |  _ \| | __ _| |_ / _| ___  _ __ _ __ ___  
+| |   / _` | &apos;_ ` _ \| | | | &apos;_ \ / _` |/ _` | | |_) | |/ _` | __| |_ / _ \| &apos;__| &apos;_ ` _ \ 
+| |__| (_| | | | | | | |_| | | | | (_| | (_| | |  __/| | (_| | |_|  _| (_) | |  | | | | | |
+\____/\__,_|_| |_| |_|\__,_|_| |_|\__,_|\__,_| |_|   |_|\__,_|\__|_|  \___/|_|  |_| |_| |_|
+
+  Spring-Boot:  (v2.4.4)
+  Camunda Platform: (v7.15.0)
+  Camunda Platform Spring Boot Starter: (v7.15.0)
+
+10:19:09.057 [main] INFO  c.j.hello_junit.MVPerrorHandlerTest - Starting MVPerrorHandlerTest using Java 1.8.0_291 on seliiwvdec50857 with PID 1964 (started by zalbvit in C:\Users\zalbvit\eclipse-workspaces\camunda-junit\hello-junit)
+10:19:09.058 [main] DEBUG c.j.hello_junit.MVPerrorHandlerTest - Running with Spring Boot v2.4.4, Spring v5.3.5
+10:19:09.060 [main] INFO  c.j.hello_junit.MVPerrorHandlerTest - No active profile set, falling back to default profiles: default
+10:19:09.066 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+10:19:09.068 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.1.7.Final
+10:19:09.076 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:19:09.078 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:19:09.079 [background-preinit] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator&apos;s class loader
+10:19:09.079 [background-preinit] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:19:09.084 [background-preinit] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+10:19:09.131 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+10:19:09.340 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+10:19:09.355 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+10:19:09.356 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+10:19:09.356 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+10:19:09.356 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+10:19:09.356 [background-preinit] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+10:19:10.458 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@42a57993
+10:19:10.682 [main] INFO  org.camunda.bpm.engine.cfg - ENGINE-12003 Plugin &apos;CompositeProcessEnginePlugin[genericPropertiesConfiguration, camundaProcessEngineConfiguration, camundaDatasourceConfiguration, camundaHistoryConfiguration, camundaMetricsConfiguration, camundaAuthorizationConfiguration, failedJobConfiguration, disableDeploymentResourcePattern, eventPublisherPlugin, SpringBootSpinProcessEnginePlugin]&apos; activated on process engine &apos;default&apos;
+10:19:10.686 [main] INFO  org.camunda.bpm.spring.boot - STARTER-SB020 ProcessApplication enabled: autoDeployment via springConfiguration#deploymentResourcePattern is disabled
+10:19:10.689 [main] INFO  o.c.b.s.b.s.e.EventPublisherPlugin - EVENTING-001: Initialized Camunda Spring Boot Eventing Engine Plugin.
+10:19:10.689 [main] INFO  o.c.b.s.b.s.e.EventPublisherPlugin - EVENTING-003: Task events will be published as Spring Events.
+10:19:10.690 [main] INFO  o.c.b.s.b.s.e.EventPublisherPlugin - EVENTING-005: Execution events will be published as Spring Events.
+10:19:10.692 [main] INFO  o.c.b.s.b.s.e.EventPublisherPlugin - EVENTING-007: History events will be published as Spring events.
+10:19:10.698 [main] INFO  org.camunda.spin - SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormatProvider[name = application/json]
+10:19:10.994 [main] INFO  org.camunda.spin - SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormatProvider[name = application/xml]
+10:19:11.003 [main] INFO  org.camunda.spin - SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormat[name = application/xml]
+10:19:11.003 [main] INFO  org.camunda.spin - SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
+10:19:11.092 [main] INFO  org.camunda.bpm.dmn.feel.scala - FEEL/SCALA-01001 Spin value mapper detected
+10:19:11.296 [main] INFO  org.camunda.feel.FeelEngine - Engine created. [value-mapper: CompositeValueMapper(List(org.camunda.feel.impl.JavaValueMapper@77c233af, org.camunda.spin.plugin.impl.feel.integration.SpinValueMapper@37b56ac7)), function-provider: org.camunda.bpm.dmn.feel.impl.scala.function.CustomFunctionTransformer@630b6190, clock: SystemClock, configuration: Configuration(false)]
+10:19:11.405 [main] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+10:19:11.407 [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+10:19:11.407 [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+10:19:11.407 [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+10:19:11.408 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+10:19:11.415 [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=&lt;masked&gt;}
+10:19:11.415 [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName.................&quot;org.h2.Driver&quot;
+10:19:11.416 [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+10:19:11.416 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+10:19:11.416 [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+10:19:11.417 [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+10:19:11.417 [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+10:19:11.417 [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+10:19:11.417 [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:mem:camunda-spring-boot-test;DB_CLOSE_ON_EXIT=false
+10:19:11.418 [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+10:19:11.418 [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+10:19:11.418 [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+10:19:11.418 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+10:19:11.419 [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+10:19:11.419 [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+10:19:11.420 [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................&lt;masked&gt;
+10:19:11.420 [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................&quot;HikariPool-1&quot;
+10:19:11.420 [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+10:19:11.421 [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+10:19:11.421 [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+10:19:11.424 [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+10:19:11.425 [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+10:19:11.425 [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+10:19:11.426 [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................&quot;sa&quot;
+10:19:11.426 [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+10:19:11.426 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:19:11.684 [main] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.686 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:19:11.788 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+10:19:11.791 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.792 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.792 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.793 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.794 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.794 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.795 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.796 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.797 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:camunda-spring-boot-test user=SA
+10:19:11.797 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+10:19:14.659 [main] INFO  org.camunda.bpm.connect - CNCT-01004 Discovered provider for connector id &apos;http-connector&apos; and class &apos;org.camunda.connect.httpclient.impl.HttpConnectorImpl&apos;: &apos;org.camunda.connect.httpclient.impl.HttpConnectorProviderImpl&apos;
+10:19:14.664 [main] INFO  org.camunda.bpm.connect - CNCT-01004 Discovered provider for connector id &apos;soap-http-connector&apos; and class &apos;org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorImpl&apos;: &apos;org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorProviderImpl&apos;
+10:19:15.128 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;engine&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql&apos;
+10:19:15.171 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;history&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql&apos;
+10:19:15.185 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;identity&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql&apos;
+10:19:15.206 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;case.engine&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql&apos;
+10:19:15.213 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;case.history&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql&apos;
+10:19:15.218 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;decision.engine&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql&apos;
+10:19:15.230 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03016 Performing database operation &apos;create&apos; on component &apos;decision.history&apos; with resource &apos;org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql&apos;
+10:19:15.262 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03067 No history level property found in database
+10:19:15.262 [main] INFO  org.camunda.bpm.engine.persistence - ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+10:19:15.319 [main] INFO  org.camunda.bpm.engine - ENGINE-00001 Process Engine default created.
+10:19:15.554 [main] INFO  o.c.b.s.b.s.r.CamundaJerseyResourceConfig - Configuring camunda rest api.
+10:19:15.578 [main] INFO  o.c.b.s.b.s.r.CamundaJerseyResourceConfig - Finished configuring camunda rest api.
+10:19:15.788 [main] DEBUG o.h.v.m.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+10:19:15.798 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+10:19:15.799 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+10:19:15.799 [main] DEBUG o.h.v.i.e.AbstractConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+10:19:15.800 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+10:19:15.801 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+10:19:15.801 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+10:19:15.802 [main] DEBUG o.h.v.i.x.c.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator&apos;s class loader
+10:19:15.802 [main] DEBUG o.h.v.i.x.config.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+10:19:15.803 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+10:19:15.805 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+10:19:15.807 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+10:19:15.807 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+10:19:15.807 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+10:19:15.808 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+10:19:15.809 [main] DEBUG o.h.v.i.e.ValidatorFactoryConfigurationHelper - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+10:19:15.942 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService &apos;applicationTaskExecutor&apos;
+10:19:16.059 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+10:19:16.110 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - &apos;viewControllerHandlerMapping&apos; {/=ParameterizableViewController [view=org.springframework.web.servlet.view.RedirectView: [RedirectView]; URL [/camunda/app/]]}
+10:19:16.127 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - &apos;beanNameHandlerMapping&apos; {}
+10:19:16.153 [main] DEBUG _.s.w.s.HandlerMapping.Mappings - &apos;resourceHandlerMapping&apos; {/camunda/lib/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/camunda/lib/]], /camunda/api/**=ResourceHttpRequestHandler [Classpath [api/]], /camunda/app/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/camunda/app/]], /webjars/**=ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]}
+10:19:16.382 [main] INFO  org.camunda.bpm.container - ENGINE-08024 Found processes.xml file at file:/C:/Users/zalbvit/eclipse-workspaces/camunda-junit/hello-junit/target/classes/META-INF/processes.xml
+10:19:16.384 [main] INFO  org.camunda.bpm.container - ENGINE-08025 Detected empty processes.xml file, using default values
+10:19:16.393 [main] INFO  org.camunda.bpm.container - ENGINE-08023 Deployment summary for process archive &apos;hello-junit&apos;: 
+
+        process.bpmn
+
+10:19:16.594 [main] INFO  org.camunda.bpm.application - ENGINE-07021 ProcessApplication &apos;hello-junit&apos; registered for DB deployments [1]. Will execute process definitions 
+
+        SomeFlowToTestProcess[version: 1, id: SomeFlowToTestProcess:1:3]
+Deployment does not provide any case definitions.
+10:19:16.606 [main] INFO  org.camunda.bpm.container - ENGINE-08050 Process application hello-junit successfully deployed
+10:19:16.610 [main] INFO  c.j.hello_junit.MVPerrorHandlerTest - Started MVPerrorHandlerTest in 7.894 seconds (JVM running for 9.033)
+10:19:16.644 [main] WARN  o.c.b.e.p.j.r.TestCoverageProcessEngineRule - CompensationEventCoverageHandler not registered with process engine configuration! Compensation boundary events coverage will not be registered.
+10:19:16.901 [main] ERROR org.camunda.bpm.engine.context - ENGINE-16004 Exception while closing command context: Unknown property used in expression: ${info.implementationType == &quot;Alternative Path&quot;}. Cause: Cannot resolve identifier &apos;info&apos;
+org.camunda.bpm.engine.ProcessEngineException: Unknown property used in expression: ${info.implementationType == &quot;Alternative Path&quot;}. Cause: Cannot resolve identifier &apos;info&apos;
+	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:63)
+	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:50)
+	at org.camunda.bpm.engine.impl.el.UelExpressionCondition.evaluate(UelExpressionCondition.java:45)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior.doLeave(ExclusiveGatewayActivityBehavior.java:64)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:56)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityLeave.execute(PvmAtomicOperationActivityLeave.java:32)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1978)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:2045)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1994)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:52)
+	at org.camunda.bpm.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:44)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:61)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute$2.callback(PvmAtomicOperationActivityExecute.java:50)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueIfExecutionDoesNotAffectNextOperation(PvmExecutionImpl.java:2039)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:42)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationActivityExecute.execute(PvmAtomicOperationActivityExecute.java:31)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1978)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl$6.callback(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.continueExecutionIfNotCanceled(PvmExecutionImpl.java:2045)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1994)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.dispatchDelayedEventsAndPerformOperation(PvmExecutionImpl.java:1975)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:60)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(PvmAtomicOperationTransitionNotifyListenerStart.java:30)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:66)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:76)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:643)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:618)
+	at org.camunda.bpm.engine.impl.core.operation.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:62)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:111)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationTransitionCreateScope.scopeCreated(PvmAtomicOperationTransitionCreateScope.java:38)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:54)
+	at org.camunda.bpm.engine.impl.pvm.runtime.operation.PvmAtomicOperationCreateScope.execute(PvmAtomicOperationCreateScope.java:28)
+	at org.camunda.bpm.engine.impl.interceptor.AtomicOperationInvocation.execute(AtomicOperationInvocation.java:99)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.invokeNext(CommandInvocationContext.java:131)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:118)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext$1.call(CommandInvocationContext.java:102)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext$1.call(CommandInvocationContext.java:100)
+	at org.camunda.bpm.engine.impl.context.ProcessApplicationClassloaderInterceptor.call(ProcessApplicationClassloaderInterceptor.java:48)
+	at org.camunda.bpm.application.AbstractProcessApplication.execute(AbstractProcessApplication.java:121)
+	at org.camunda.bpm.application.AbstractProcessApplication.execute(AbstractProcessApplication.java:132)
+	at org.camunda.bpm.engine.impl.context.Context.executeWithinProcessApplication(Context.java:206)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performNext(CommandInvocationContext.java:100)
+	at org.camunda.bpm.engine.impl.interceptor.CommandInvocationContext.performOperation(CommandInvocationContext.java:86)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:634)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:608)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:288)
+	at org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:460)
+	at org.camunda.bpm.engine.impl.pvm.runtime.PvmExecutionImpl.start(PvmExecutionImpl.java:264)
+	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:66)
+	at org.camunda.bpm.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:38)
+	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:28)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:110)
+	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:72)
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140)
+	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:70)
+	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:70)
+	at org.camunda.bpm.engine.impl.interceptor.CommandCounterInterceptor.execute(CommandCounterInterceptor.java:35)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.executeWithVariablesInReturn(ProcessInstantiationBuilderImpl.java:166)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:132)
+	at org.camunda.bpm.engine.impl.ProcessInstantiationBuilderImpl.execute(ProcessInstantiationBuilderImpl.java:128)
+	at org.camunda.bpm.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:88)
+	at com.junitPoc.hello_junit.MVPerrorHandlerTest.testHappyPath(MVPerrorHandlerTest.java:83)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.junit.rules.TestWatcher$1.evaluate(TestWatcher.java:61)
+	at org.camunda.bpm.engine.test.ProcessEngineRule$1.evaluate(ProcessEngineRule.java:176)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.camunda.bpm.engine.impl.javax.el.PropertyNotFoundException: Cannot resolve identifier &apos;info&apos;
+	at org.camunda.bpm.engine.impl.juel.AstIdentifier.eval(AstIdentifier.java:83)
+	at org.camunda.bpm.engine.impl.juel.AstProperty.eval(AstProperty.java:52)
+	at org.camunda.bpm.engine.impl.juel.AstBinary$SimpleOperator.eval(AstBinary.java:27)
+	at org.camunda.bpm.engine.impl.juel.AstBinary.eval(AstBinary.java:106)
+	at org.camunda.bpm.engine.impl.juel.AstEval.eval(AstEval.java:50)
+	at org.camunda.bpm.engine.impl.juel.AstNode.getValue(AstNode.java:26)
+	at org.camunda.bpm.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
+	at org.camunda.bpm.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:40)
+	at org.camunda.bpm.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:58)
+	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocationInContext(DefaultDelegateInterceptor.java:92)
+	at org.camunda.bpm.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:63)
+	at org.camunda.bpm.engine.impl.el.JuelExpression.getValue(JuelExpression.java:60)
+	... 142 common frames omitted
+10:19:16.914 [main] INFO  o.c.b.e.p.j.r.TestCoverageProcessEngineRule - testHappyPath(com.junitPoc.hello_junit.MVPerrorHandlerTest) failed.
+10:19:16.914 [main] DEBUG org.camunda.bpm.engine.test - annotation @Deployment deletes deployment for MVPerrorHandlerTest.testHappyPath
+</system-out>
+  </testcase>
+</testsuite>

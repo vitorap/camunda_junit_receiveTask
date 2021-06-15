@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1iu77oe" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <bpmn:message id="Message_0mpyrx4" name="completeTask" />
+  <bpmn:process id="SomeFlowToTestProcess" name="Some Flow to Test" isExecutable="true">
+    <bpmn:laneSet id="LaneSet_0f2mxmf" />
+    <bpmn:sequenceFlow id="AlternativePathSequenceFlow" name="Alternative Path" sourceRef="ExclusiveGateway_1o7j12g" targetRef="Gateway_1s91imc">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${info.implementationType == "Alternative Path"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_05spv31" sourceRef="StartEvent_1" targetRef="ExclusiveGateway_1o7j12g" />
+    <bpmn:sequenceFlow id="SequenceFlow_0n00qw3" sourceRef="CompleteReceiveTaskTask" targetRef="Gateway_1sa77gl" />
+    <bpmn:sequenceFlow id="DefaultPathSequenceFlow" name="Default Path" sourceRef="ExclusiveGateway_1o7j12g" targetRef="ExclusiveGateway_0tx02at" />
+    <bpmn:sequenceFlow id="Flow_1fmz6kn" sourceRef="Gateway_1s91imc" targetRef="MockScriptTask" />
+    <bpmn:sequenceFlow id="Flow_1a5a7jw" sourceRef="Gateway_1s91imc" targetRef="CompleteReceiveTaskTask" />
+    <bpmn:receiveTask id="CompleteReceiveTaskTask" name="Complete Receive task" camunda:asyncBefore="true" camunda:asyncAfter="true" messageRef="Message_0mpyrx4">
+      <bpmn:extensionElements>
+        <camunda:executionListener expression="${execution.setVariable(&#34;msgListenerSet&#34;,true)}" event="start" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1a5a7jw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0n00qw3</bpmn:outgoing>
+    </bpmn:receiveTask>
+    <bpmn:parallelGateway id="Gateway_1s91imc">
+      <bpmn:extensionElements>
+        <camunda:executionListener expression="${execution.setVariable(&#34;msgListenerSet&#34;,false)}" event="start" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>AlternativePathSequenceFlow</bpmn:incoming>
+      <bpmn:outgoing>Flow_1a5a7jw</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1fmz6kn</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:endEvent id="EndEvent_0gpko41">
+      <bpmn:incoming>SequenceFlow_0ugcmef</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:scriptTask id="MockScriptTask" name="mockScript" camunda:asyncBefore="true" camunda:asyncAfter="true" scriptFormat="groovy">
+      <bpmn:incoming>Flow_1fmz6kn</bpmn:incoming>
+      <bpmn:outgoing>Flow_0k3z53o</bpmn:outgoing>
+      <bpmn:script>//nothing here, its a mock!
+def i = "mock";</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1o7j12g" default="DefaultPathSequenceFlow">
+      <bpmn:incoming>SequenceFlow_05spv31</bpmn:incoming>
+      <bpmn:outgoing>DefaultPathSequenceFlow</bpmn:outgoing>
+      <bpmn:outgoing>AlternativePathSequenceFlow</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_05spv31</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:parallelGateway id="Gateway_1sa77gl">
+      <bpmn:incoming>SequenceFlow_0n00qw3</bpmn:incoming>
+      <bpmn:incoming>Flow_0k3z53o</bpmn:incoming>
+      <bpmn:outgoing>Flow_16q87gb</bpmn:outgoing>
+    </bpmn:parallelGateway>
+    <bpmn:sequenceFlow id="Flow_0k3z53o" sourceRef="MockScriptTask" targetRef="Gateway_1sa77gl" />
+    <bpmn:sequenceFlow id="Flow_16q87gb" sourceRef="Gateway_1sa77gl" targetRef="ExclusiveGateway_0tx02at" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0tx02at">
+      <bpmn:incoming>DefaultPathSequenceFlow</bpmn:incoming>
+      <bpmn:incoming>Flow_16q87gb</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ugcmef</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0ugcmef" sourceRef="ExclusiveGateway_0tx02at" targetRef="EndEvent_0gpko41" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="SomeFlowToTestProcess">
+      <bpmndi:BPMNEdge id="SequenceFlow_0ugcmef_di" bpmnElement="SequenceFlow_0ugcmef">
+        <di:waypoint x="735" y="310" />
+        <di:waypoint x="772" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_16q87gb_di" bpmnElement="Flow_16q87gb">
+        <di:waypoint x="625" y="194" />
+        <di:waypoint x="710" y="194" />
+        <di:waypoint x="710" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0k3z53o_di" bpmnElement="Flow_0k3z53o">
+        <di:waypoint x="560" y="140" />
+        <di:waypoint x="600" y="140" />
+        <di:waypoint x="600" y="169" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1a5a7jw_di" bpmnElement="Flow_1a5a7jw">
+        <di:waypoint x="370" y="225" />
+        <di:waypoint x="370" y="250" />
+        <di:waypoint x="460" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fmz6kn_di" bpmnElement="Flow_1fmz6kn">
+        <di:waypoint x="370" y="175" />
+        <di:waypoint x="370" y="140" />
+        <di:waypoint x="460" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zg9nsz_di" bpmnElement="DefaultPathSequenceFlow">
+        <di:waypoint x="280" y="335" />
+        <di:waypoint x="280" y="400" />
+        <di:waypoint x="710" y="400" />
+        <di:waypoint x="710" y="335" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="441" y="382" width="61" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0n00qw3_di" bpmnElement="SequenceFlow_0n00qw3">
+        <di:waypoint x="560" y="250" />
+        <di:waypoint x="600" y="250" />
+        <di:waypoint x="600" y="219" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_05spv31_di" bpmnElement="SequenceFlow_05spv31">
+        <di:waypoint x="188" y="310" />
+        <di:waypoint x="255" y="310" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1lx1zdh_di" bpmnElement="AlternativePathSequenceFlow">
+        <di:waypoint x="280" y="285" />
+        <di:waypoint x="280" y="200" />
+        <di:waypoint x="345" y="200" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="279" y="179" width="77" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ReceiveTask_0uf9900_di" bpmnElement="CompleteReceiveTaskTask">
+        <dc:Bounds x="460" y="210" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1uu3h8t_di" bpmnElement="Gateway_1s91imc">
+        <dc:Bounds x="345" y="175" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0gpko41_di" bpmnElement="EndEvent_0gpko41">
+        <dc:Bounds x="772" y="292" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1fyhn9z_di" bpmnElement="MockScriptTask">
+        <dc:Bounds x="460" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1o7j12g_di" bpmnElement="ExclusiveGateway_1o7j12g" isMarkerVisible="true">
+        <dc:Bounds x="255" y="285" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="152" y="292" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1aw1tnb_di" bpmnElement="Gateway_1sa77gl">
+        <dc:Bounds x="575" y="169" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0tx02at_di" bpmnElement="ExclusiveGateway_0tx02at" isMarkerVisible="true">
+        <dc:Bounds x="685" y="285" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
