@@ -10,6 +10,7 @@ import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.TaskService;
 import org.camunda.bpm.engine.runtime.EventSubscription;
 import org.camunda.bpm.engine.runtime.Execution;
+import org.camunda.bpm.engine.runtime.Job;
 import org.camunda.bpm.engine.runtime.MessageCorrelationResult;
 import org.camunda.bpm.engine.runtime.MessageCorrelationResultWithVariables;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
@@ -26,10 +27,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
+
 import com.junitPoc.hello_junit.*;
  
 
 import static org.camunda.bpm.engine.test.assertions.ProcessEngineTests.*;
+import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.assertThat;
+import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.execute;
+import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.job;
+import static org.camunda.bpm.engine.test.assertions.bpmn.BpmnAwareTests.jobQuery;
 import static org.junit.Assert.*;
 
 import java.util.HashMap;
@@ -116,11 +122,17 @@ public class ProcessUnitTest {
 			 
 	 assertThat(processInstance).isStarted().isWaitingAt("CompleteReceiveTaskTask");
 	 
-	
-//	 //1st Approach
-//	 runtimeService.createMessageCorrelation("completeTask")
-//	 				.processInstanceBusinessKey(ProcessConstants.PROCESS_BUSINESS_KEY)
-//	 				.correlate();
+//	 Completing the job explicitly
+	 Job receiveTaskJob = job(jobQuery().messages().executable().activityId("CompleteReceiveTaskTask"), processInstance);
+	 assertThat(receiveTaskJob).isNotNull();
+	 execute(receiveTaskJob);
+	 
+	 
+//	  1st Approach
+	 runtimeService.createMessageCorrelation("completeTask")
+	 				.processInstanceBusinessKey(ProcessConstants.PROCESS_BUSINESS_KEY)
+	 				.correlate();
+//	 
 //	 
 //
 //	 //2nd Approach
@@ -133,23 +145,13 @@ public class ProcessUnitTest {
 //			  .messageEventSubscriptionName("completeTask")
 //			  .singleResult();
 //	 
-//	 //4th Approach	 
-//	 org.camunda.bpm.engine.MismatchingMessageCorrelationException: Cannot correlate message 'completeTask': No process definition or execution matches the parameters
-//	 MessageCorrelationResult result = runtimeService
-//			  .createMessageCorrelation("completeTask")
-//			  .processInstanceBusinessKey(ProcessConstants.PROCESS_DEFINITION_KEY)
-//			  .correlateWithResult();
-//			 
-	
- 	//Finally asserting the end
+
+
  	assertThat(processInstance).isStarted().isNotWaitingAt("CompleteReceiveTaskTask");
 	assertThat(processInstance).isEnded();
 
 	 
   }
-   
-  
  
 
 }
- 
